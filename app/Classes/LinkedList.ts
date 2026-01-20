@@ -80,7 +80,7 @@ export class LinkedList {
     // };
   }
 
-  toArray() {
+  toArray(): product[] {
     let arrResult: product[] = [];
     let current = this.head;
     while (current) {
@@ -89,7 +89,7 @@ export class LinkedList {
     }
     return arrResult;
   }
-  private nodeSearching(id: number): myNode {
+  private nodeSearching(id: number): myNode | undefined {
     // by traversing from both ends (head & tail)
     let beginning_current: myNode = this.head;
     let last_current: myNode = this.tail;
@@ -104,7 +104,7 @@ export class LinkedList {
       ) {
         return null;
       }
-      beginning_current = beginning_current.nextP;
+      beginning_current = beginning_current?.nextP;
       last_current = last_current.preP;
     }
   }
