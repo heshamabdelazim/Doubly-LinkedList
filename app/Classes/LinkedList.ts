@@ -70,7 +70,7 @@ export class LinkedList {
       current = current.nextP;
     }
   }
-  editProduct(id, quantity?: number): void {
+  editProduct(id: number, quantity?: number): void {
     let target = this.nodeSearching(id);
     if (target && quantity) target.setQuantity(quantity);
     // target.data = {
