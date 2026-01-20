@@ -1,5 +1,5 @@
 type myNode = Nodee | null;
-export type product = { name: string; quantity: number };
+export type product = { name: string; quantity: number; id: number };
 // --------------------------------
 class Nodee {
   data: product;
