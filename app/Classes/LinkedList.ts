@@ -94,8 +94,8 @@ export class LinkedList {
     let beginning_current: myNode = this.head;
     let last_current: myNode = this.tail;
     while (beginning_current || last_current) {
-      if (beginning_current.id === id) return beginning_current;
-      if (last_current.id === id) return last_current;
+      if (beginning_current?.id === id) return beginning_current;
+      if (last_current?.id === id) return last_current;
 
       if (
         beginning_current === last_current ||
@@ -105,7 +105,7 @@ export class LinkedList {
         return null;
       }
       beginning_current = beginning_current?.nextP;
-      last_current = last_current.preP;
+      last_current = last_current?.preP;
     }
   }
   deleteNode(id: number): void {
