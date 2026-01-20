@@ -7,10 +7,11 @@ class Nodee {
   preP: myNode;
   id: number;
   constructor(name: string, quantity: number = 1) {
-    this.data = { name, quantity: quantity > 0 ? quantity : 1 };
+    const UniqueID: number = Date.now() + Math.random();
+    this.data = { id: UniqueID, name, quantity: quantity > 0 ? quantity : 1 };
     this.nextP = null;
     this.preP = null;
-    this.id = Date.now() + Math.random();
+    this.id = UniqueID;
   }
   setQuantity(quantity: number) {
     if (quantity > 0) this.data.quantity = quantity;
@@ -83,7 +84,7 @@ export class LinkedList {
     let arrResult: product[] = [];
     let current = this.head;
     while (current) {
-      arrResult.push({ ...current.data, id: current.id });
+      arrResult.push(current.data);
       current = current.nextP;
     }
     return arrResult;
