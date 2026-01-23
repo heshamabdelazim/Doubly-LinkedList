@@ -9,7 +9,7 @@ export default function Home() {
 
   let [products, setProducts] = useState<Array<product>>([]);
   
-  const handle_submitLast=(event:React.FormEvent<HTMLFormElement>)=>{
+  const handle_submitLast=(event:React.MouseEvent<HTMLFormElement>)=>{
     event.preventDefault();
     const name= nameRefInb.current?.value || "";
     const quantity= quantityRefInb.current?.value || 0
@@ -19,7 +19,7 @@ export default function Home() {
     }
   }
 
-  const handle_submitFirst = (e) => { 
+  const handle_submitFirst = (e:React.MouseEvent<HTMLFormElement>) => { 
     e.preventDefault();
     const name= nameRefInb.current?.value || "";
     const quantity= quantityRefInb.current?.value || 0
