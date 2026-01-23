@@ -49,7 +49,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <h1 className="mx-auto text-4xl">Simple Ware-House</h1>
+        <h1 className="mx-auto text-4xl">Simple Ware-House - Doubly LinkedList</h1>
         <form className="p-8 p-6 rounded m-auto border-2 border-red-300">
         <div>
           <label htmlFor="product-name">Product Name:</label>
@@ -66,8 +66,7 @@ export default function Home() {
           <ul>
             { products.map((prod)=>(
               <li key={prod.id} className="flex items-center justify-between">
-
-                <p>                {isHead(prod.id) && <span className="bg-green-400 p-1.5 font-bold">Head</span>}
+                <p>{isHead(prod.id) && <span className="bg-green-400 p-1.5 font-bold">Head</span>}
                 {isTail(prod.id) && <span className="bg-blue-400 p-1.5 font-bold">Tail</span>}
                   name: {prod.name} - Quantity: {prod.quantity}
                 </p>

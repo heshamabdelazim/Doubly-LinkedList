@@ -89,7 +89,7 @@ export class LinkedList {
     }
     return arrResult;
   }
-  private nodeSearching(id: number): myNode | undefined {
+  private nodeSearching(id: number): myNode {
     // by traversing from both ends (head & tail)
     let beginning_current: myNode = this.head;
     let last_current: myNode = this.tail;
