@@ -1,4 +1,4 @@
-type myNode = Nodee | null;
+type myNode = Nodee | null | undefined;
 export type product = { name: string; quantity: number; id: number };
 // --------------------------------
 class Nodee {
@@ -127,8 +127,8 @@ export class LinkedList {
       return;
     }
 
-    target.preP?.setNextP(target.nextP);
-    target.nextP?.setPreP(target.preP);
+    target?.preP?.setNextP(target?.nextP);
+    target?.nextP?.setPreP(target?.preP);
   }
 }
 export const y = new LinkedList();
