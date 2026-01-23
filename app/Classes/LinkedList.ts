@@ -149,8 +149,7 @@ y.insert_first("four", 4);
 // y.insert_first("eleven", 5);
 // y.insert_end("twelve", 3);
 
-let anyId = y.toArray()[2].id;
-console.log(y.nodeSearching(anyId));
+
 // y.editProduct(anyId, 9);
 //eleven => nine => seven => five => three => one => two => four => six => eight => ten => twelve
 // four => three => two => one
