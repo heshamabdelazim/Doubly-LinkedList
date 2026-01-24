@@ -31,8 +31,11 @@ export default function Home() {
   
   const handleUpdate = (id:number, quantity:number):void => { 
     const userInput = prompt("Edit the quantity" + id, quantity?.toString());
-    !Number.isNaN(+userInput) && x.editProduct(id, userInput);
-    x.editProduct(id, userInput ? +userInput : quantity);
+    if (userInput && !Number.isNaN(+userInput)) {
+      x.editProduct(id, +userInput);
+    } else {
+      x.editProduct(id, quantity);
+    }
     setProducts(x.toArray());
   }
   const handleDelete = (id:number):void => { 
