@@ -134,6 +134,9 @@ export class LinkedList {
     target?.nextP?.setPreP(target?.preP);
     this.size--
   }
+  getSize(): number {
+    return this.size;
+  }
 }
 export const y = new LinkedList();
 y.insert_first("one", 1);

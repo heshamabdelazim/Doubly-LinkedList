@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <h1 className="mx-auto text-4xl">Simple Ware-House - Doubly LinkedList</h1>
+        <h1 className="mx-auto text-4xl">Simple WareHouse - Doubly LinkedList</h1>
         <form className="p-8 p-6 rounded m-auto border-2 border-red-300">
           <div>
             <label htmlFor="product-name">Product Name:</label>
@@ -65,6 +65,7 @@ export default function Home() {
           <button onClick={(e) => handle_submitFirst(e)} className="bg-amber-300 p-2" >Insert First</button>
           <button onClick={(e) => handle_submitLast(e)} className="bg-amber-300 p-2 ml-1" >Insert Last</button>
         </form>
+        <p className="font-bold">Size: {x.getSize()}</p>
         <div id="list" className="p-[2rem] bg-amber-300 min-w-[100%]">
           <ul>
             {products.map((prod) => (
