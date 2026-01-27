@@ -107,6 +107,7 @@ export class LinkedList {
       beginning_current = beginning_current?.nextP;
       last_current = last_current?.preP;
     }
+    return null;
   }
   deleteNode(id: number): void {
     let target = this.nodeSearching(id);
@@ -114,21 +115,24 @@ export class LinkedList {
     if (target === this.head && target === this.tail) {
       this.tail = null;
       this.head = null;
+      this.size--
       return;
     }
     if (target === this.head) {
       this.head = this.head?.nextP;
       this.head?.setPreP(null);
+      this.size--
       return;
     }
     if (target === this.tail) {
       this.tail = this.tail?.preP;
       this.tail?.setNextP(null);
+      this.size--
       return;
     }
-
     target?.preP?.setNextP(target?.nextP);
     target?.nextP?.setPreP(target?.preP);
+    this.size--
   }
 }
 export const y = new LinkedList();
